@@ -1,0 +1,2 @@
+file sysinfo.lja /bin/sysinfo.lja
+file sysinfo.py /bin/sysinfo.py
