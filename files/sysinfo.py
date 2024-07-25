@@ -22,7 +22,7 @@ if "network" in be.devices.keys():
         + ("UP" if "ttyTELNET0" in pv[0]["consoles"] else "DOWN")
         + " | Port: 23 | "
     )
-    term.write("Active console: " + pv[0]["console_active"])
+    term.write("Active console: " + pv[0]["console_active"] + "\n")
     gc.collect()
     gc.collect()
 
@@ -31,6 +31,6 @@ if vr("free") > 1000:
     vr("free", str(vr("free") // 1000) + "k")
 else:
     vr("free", str(vr("free")))
-term.write("\n" + vr("free") + " bytes free.")
+term.write(vr("free") + " bytes free.")
 
 be.api.setvar("return", "0")
