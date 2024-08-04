@@ -19,8 +19,7 @@ if "network" in be.devices.keys():
         )
     term.nwrite(
         "TelNet: "
-        + ("UP" if "ttyTELNET0" in pv[0]["consoles"] else "DOWN")
-        + " | Port: 23 | "
+        + ("UP | Port: 23 | " if "ttyTELNET0" in pv[0]["consoles"] else "DOWN")
     )
     term.write("Active console: " + pv[0]["console_active"] + "\n")
     gc.collect()
