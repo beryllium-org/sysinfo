@@ -26,8 +26,8 @@ if "network" in be.devices.keys():
     gc.collect()
 
 vr("free", gc.mem_free())
-if vr("free") > 1000:
-    vr("free", str(vr("free") // 1000) + "k")
+if vr("free") > 1024:
+    vr("free", str(vr("free") // 1024) + "k")
 else:
     vr("free", str(vr("free")))
 term.write(vr("free") + " bytes free.")
